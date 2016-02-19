@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Contact"
+        android:id="@+id/contact_text"
+        android:layout_marginStart="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Phone Number"
+        android:id="@+id/pho_no_text"
+        android:layout_below="@+id/contact_text"
+        android:layout_alignEnd="@+id/contact_text"
+        android:layout_marginTop="36dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contact_edit"
+        android:layout_alignTop="@+id/contact_text"
+        android:layout_alignEnd="@+id/currId"
+        android:layout_toEndOf="@+id/add"
+        android:layout_alignStart="@+id/right" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pho_no_edit"
+        android:layout_alignTop="@+id/pho_no_text"
+        android:layout_alignEnd="@+id/currId"
+        android:layout_alignStart="@+id/contact_edit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="←"
+        android:id="@+id/left"
+        android:layout_marginTop="26dp"
+        android:onClick="leftArrow"
+        android:layout_below="@+id/pho_no_edit"
+        android:layout_alignEnd="@+id/pho_no_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="→"
+        android:id="@+id/right"
+        android:onClick="rightArrow"
+        android:layout_alignTop="@+id/left"
+        android:layout_toEndOf="@+id/left"
+        android:layout_marginStart="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/delete"
+        android:onClick="deleteBtn"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/right" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/update"
+        android:layout_alignBottom="@+id/delete"
+        android:layout_alignStart="@+id/right"
+        android:onClick="updateBtn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Contact"
+        android:id="@+id/new_contact_text"
+        android:layout_below="@+id/delete"
+        android:layout_alignEnd="@+id/delete"
+        android:layout_marginTop="29dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_contact_edit"
+        android:layout_above="@+id/new_pho_no_text"
+        android:layout_alignEnd="@+id/currId"
+        android:layout_alignStart="@+id/update" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Phone Number"
+        android:id="@+id/new_pho_no_text"
+        android:layout_below="@+id/new_contact_text"
+        android:layout_alignEnd="@+id/delete"
+        android:layout_marginTop="24dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_pho_no_edit"
+        android:layout_alignTop="@+id/new_pho_no_text"
+        android:layout_alignEnd="@+id/currId"
+        android:layout_alignStart="@+id/new_contact_edit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/add"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="addBtn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Current Id"
+        android:id="@+id/currId"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
